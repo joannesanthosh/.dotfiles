@@ -1,24 +1,28 @@
-#!/bin/sh
+# Created by: Joanne Santhosh
+# Created on: Feb 2024
+# # AWS Debian Linux .dotfiles and setup script
 #
-## script/setup: Set up application for the first time after cloning, or set it
-##               back to the initial first unused state.
+# sudo apt update
+# sudo apt upgrade -y
 #
-#set -e
+# # common programs
+# sudo apt remove w3m -y
+# sudo apt install gh -y
+# sudo apt install stow -y
 #
-#cd "$(dirname "$0")/.."
+# # install NeoVim from source
+# mkdir temp
+# cd temp || exit
+# sudo apt-get install ninja-build gettext cmake unzip curl
+# git clone https://github.com/neovim/neovim
+# cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+# sudo make install
+# cd .. || exit
+# cd .. || exit
+# sudo rm -r ./temp
 #
-#script/bootstrap
-#
-#echo "==> Setting up DB…"
-## reset database to a fresh state.
-#bin/rake db:create db:reset
-#
-#if [ -z "$RAILS_ENV" ] && [ -z "$RACK_ENV" ]; then
-#  # Only things for a development environment will run inside here
-#    # Do things that need to be done to the application to set up for the first
-#      # time. Or things needed to be run to to reset the application back to first
-#        # use experience. These things are scoped to the application's domain.
-#          true
-#          fi
-#
-#          echo "==> App is now ready to go!"
+# # install languages
+# curl -fsSL https://bun.sh/install | bash
+# # shellcheck source=/dev/null
+# source ~/.bashrc
+# sudo apt install -y default-jdk
