@@ -1,5 +1,6 @@
-vim.cmd("set·encoding=utf-8")↵                                                                                                                  
-vim.cmd("set·termguicolors")↵                                                                                                                              
+-- luacheck: ignore vim
+vim.cmd("set encoding=utf-8")
+vim.cmd("set termguicolors")
 
 vim.cmd("set·number")↵                                                                                                                          
 vim.cmd("set·relativenumber")↵                                                                                                                   
@@ -10,8 +11,8 @@ vim.cmd("set·expandtab")↵
 vim.cmd("set·smartindent")↵                                                                                                                     
 vim.cmd("set·colorcolumn=80")↵                                                                                                                  
                                                                                                                                               
-vim.cmd("set·scrolloff=6")↵                                                                                                                     
-vim.cmd("set·wrap!")↵
+vim.cmd("set scrolloff=6")
+vim.cmd("set wrap!")
 
-vim.cmd("set·listchars=space:·,eol:↵·")↵
-vim.cmd("set·list")↵
+vim.cmd("set listchars=space:·,eol:↩")
+vim.cmd("set list")
